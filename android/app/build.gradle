@@ -88,6 +88,14 @@ android {
         versionName "1.0"
     }
     signingConfigs {
+         release {
+            //if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file('appProd.keystore')
+                storePassword 'Qwerty@123'
+                keyAlias 'key0'
+                keyPassword 'Qwerty@123'
+            //}
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
